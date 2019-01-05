@@ -1,0 +1,5 @@
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+Role::create(['name' => 'admin']);
+Role::create(['name' => 'service_pro']);
+Role::create(['name' => 'customer']);
