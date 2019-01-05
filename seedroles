@@ -1,5 +1,24 @@
+<?php
+
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\RequestStatus;
+
 Role::create(['name' => 'admin']);
 Role::create(['name' => 'service_pro']);
 Role::create(['name' => 'customer']);
+
+$newStatus = new RequestStatus();
+$newStatus->status_name = 'NEW';
+$newStatus->save();
+
+$ongoingStatus = new RequestStatus();
+$ongoingStatus->status_name = 'ONGOING';
+$ongoingStatus->save();
+
+$hiredStatus = new RequestStatus();
+$hiredStatus->status_name = 'HIRED';
+$hiredStatus->save();
+
+exit;
+
