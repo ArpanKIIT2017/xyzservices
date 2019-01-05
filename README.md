@@ -1,11 +1,17 @@
 # xyzservices
 
+### Set up dependencies
+
+Composer is required to be installed. Inside the project directory
+    
+    composer install
+
 ### Set up database connectivity and seed the database
 
 Update database paramaters in .env file in project root and run migrations
 
     php artisan migrate
-    cat seedroles | php artisan tinker
+    php artisan tinker seedroles
 
 ### Run the development server
 
